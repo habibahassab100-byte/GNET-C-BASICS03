@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment_three
@@ -48,26 +49,37 @@ namespace Assignment_three
         //{
         //    prices = new double[] { 10.0, 12.5, 15.0 };
         //}
+
+        #endregion
         #region Question nine
         //  Write a method bool TryGetPrice(string title, out double price) that returns true and sets
         //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
-        static bool TryGetPrice(string title, out double price)
+        //static bool TryGetPrice(string title, out double price)
+        //{
+        //    if (title == "Clean Code")
+        //    {
+        //        price = 25.5;
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        price = 0;
+        //        return false;
+        //    }
+        //}
+
+        #endregion
+        #region Question ten
+        // Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
+        // it once with only a title, and once passing both a title and pages.
+        static void PrintBookInfo(string title, int pages = 300)
         {
-            if (title == "Clean Code")
-            {
-                price = 25.5;
-                return true;
-            }
-            else
-            {
-                price = 0;
-                return false;
-            }
+            Console.WriteLine($"Title: {title}");
+            Console.WriteLine($"Pages: {pages}");
         }
 
         #endregion
 
-        #endregion
         static void Main(string[] args)
         {
             #region Question 1 
@@ -133,12 +145,20 @@ namespace Assignment_three
             #region Question nine
             //  Write a method bool TryGetPrice(string title, out double price) that returns true and sets
             //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
-            bool found = TryGetPrice("Clean Code", out double price);
+            //bool found = TryGetPrice("Clean Code", out double price);
 
-            if (found)
-            {
-                Console.WriteLine(price);
-            }
+            //if (found)
+            //{
+            //    Console.WriteLine(price);
+            //}
+            #endregion
+            #region Question ten
+            // Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
+            // it once with only a title, and once passing both a title and pages.
+
+            PrintBookInfo("Clean Code");
+
+            PrintBookInfo("Java Basics", 450);
             #endregion
         }
 
