@@ -16,12 +16,21 @@ namespace Assignment_three
         #region Question five
         //Write a method AddBonusPages(int pages) that adds 50 to pages.Call it with a variable
         //int pages = 400; and print pages afterward.What do you expect to see, and why?
-         public static void AddBonusPages(int pages)
+        // public static void AddBonusPages(int pages)
+        //{
+        //    pages += 50;
+        //}
+        #endregion
+        #region Question six 
+        // Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+        //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+        //see, and why
+        public static void ApplyDiscount(double[]prices)
         {
-            pages += 50;
+            prices[0] -= 5;
+             
         }
         #endregion
-
         static void Main(string[] args)
         {
             #region Question 1 
@@ -44,15 +53,24 @@ namespace Assignment_three
             //PrintWelcomeMessage();
             #endregion
             #region Question five
-           // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
-           //int pages = 400; and print pages afterward. What do you expect to see, and why?
-           int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
+            // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+            //int pages = 400;
+            // AddBonusPages(pages);
+            // Console.WriteLine(pages);
             // expect it to print 400 because the method AddBonusPages does not change the original variable pages
             // it only modifies a copy of it.
             #endregion
-
+            #region Question six 
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it
+            //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and  why
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
+            // it will change obviously bec array is  a refrence type 
+ 
+            #endregion
         }
     }
 }
