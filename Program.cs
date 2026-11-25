@@ -82,13 +82,23 @@ namespace Assignment_three
         #region Question eleven 
         //Using the PrintBookInfo method from the question above, call it by naming the
         //parameters, passing pages before title
-        static void PrintBookInfo(string title, int pages = 300)
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"Title: {title}");
+        //    Console.WriteLine($"Pages: {pages}");
+        //}
+        #endregion
+        #region Question Twelve
+        // Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+        //Call it with three book titles.
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine($"Title: {title}");
-            Console.WriteLine($"Pages: {pages}");
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
         #endregion
-
         static void Main(string[] args)
         {
             #region Question 1 
@@ -110,6 +120,10 @@ namespace Assignment_three
             //"Welcome to the Library!".Call it from Main.
             //PrintWelcomeMessage();
             #endregion
+            
+
+            
+
             #region Question five
             // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             //int pages = 400; and print pages afterward. What do you expect to see, and why?
@@ -172,7 +186,13 @@ namespace Assignment_three
             #region Question eleven 
             //Using the PrintBookInfo method from the question above, call it by naming the
             //parameters, passing pages before title
-            PrintBookInfo(pages: 450, title: "Clean Code");
+            //PrintBookInfo(pages: 450, title: "Clean Code");
+
+            #endregion
+            #region Question Twelve
+            // Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+            //Call it with three book titles.
+            PrintAllTitles("Clean Code", "Java Basics", "C# Fundamentals");
 
             #endregion
         }
