@@ -4,6 +4,16 @@ namespace Assignment_three
 {
     internal class Program
     {
+
+        #region Question three
+        //Write a method called PrintWelcomeMessage that takes no parameters and prints
+        //"Welcome to the Library!".Call it from Main.
+        public static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+        #endregion
+
         static void Main(string[] args)
         {
             #region Question 1 
@@ -16,9 +26,16 @@ namespace Assignment_three
             #region Question two 
             //Create a 2x2 multidimensional array int[,] shelfCopies where shelf 0 has 3, 5 copies and
             //shelf 1 has 1, 4 copies.Print the number of copies on shelf 1, slot 0.
-            int[,] ShelfCopies = { { 3, 5 }, { 1, 4 } };
-            Console.WriteLine(ShelfCopies[1, 0]);
+            //int[,] ShelfCopies = { { 3, 5 }, { 1, 4 } };
+            //Console.WriteLine(ShelfCopies[1, 0]);
             #endregion
+
+            #region Question three
+            //Write a method called PrintWelcomeMessage that takes no parameters and prints
+            //"Welcome to the Library!".Call it from Main.
+             PrintWelcomeMessage();
+            #endregion
+
         }
     }
 }
