@@ -72,12 +72,21 @@ namespace Assignment_three
         #region Question ten
         // Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
         // it once with only a title, and once passing both a title and pages.
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"Title: {title}");
+        //    Console.WriteLine($"Pages: {pages}");
+        //}
+
+        #endregion
+        #region Question eleven 
+        //Using the PrintBookInfo method from the question above, call it by naming the
+        //parameters, passing pages before title
         static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"Title: {title}");
             Console.WriteLine($"Pages: {pages}");
         }
-
         #endregion
 
         static void Main(string[] args)
@@ -156,9 +165,15 @@ namespace Assignment_three
             // Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
             // it once with only a title, and once passing both a title and pages.
 
-            PrintBookInfo("Clean Code");
+            //PrintBookInfo("Clean Code");
 
-            PrintBookInfo("Java Basics", 450);
+            //PrintBookInfo("Java Basics", 450);
+            #endregion
+            #region Question eleven 
+            //Using the PrintBookInfo method from the question above, call it by naming the
+            //parameters, passing pages before title
+            PrintBookInfo(pages: 450, title: "Clean Code");
+
             #endregion
         }
 
