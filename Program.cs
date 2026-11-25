@@ -25,10 +25,18 @@ namespace Assignment_three
         // Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
         //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
         //see, and why
-        public static void ApplyDiscount(double[]prices)
+        //public static void ApplyDiscount(double[]prices)
+        //{
+        //    prices[0] -= 5;
+
+        //}
+        #endregion
+        #region Question seven
+        //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+        //Call it and print pages afterward. How is the result different from question 5 ?
+        static void AddBonusPagesByRef(ref int pages)
         {
-            prices[0] -= 5;
-             
+            pages = pages + 50;
         }
         #endregion
         static void Main(string[] args)
@@ -65,12 +73,23 @@ namespace Assignment_three
             //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it
             //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
             //see, and  why
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine(prices[0]);
             // it will change obviously bec array is  a refrence type 
 
- 
+
+            #endregion
+
+            #region Question seven
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            //Call it and print pages afterward. How is the result different from question 5 ?
+
+            int pages = 400;
+
+            AddBonusPagesByRef(ref pages);
+
+            Console.WriteLine(pages);
             #endregion
         }
     }
