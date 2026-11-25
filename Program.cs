@@ -44,11 +44,28 @@ namespace Assignment_three
         // Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
         //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
         //afterward
-        static void ReplaceArray(ref double[] prices)
+        //static void ReplaceArray(ref double[] prices)
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //}
+        #region Question nine
+        //  Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+        //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
+        static bool TryGetPrice(string title, out double price)
         {
-            prices = new double[] { 10.0, 12.5, 15.0 };
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
         }
 
+        #endregion
 
         #endregion
         static void Main(string[] args)
@@ -107,11 +124,21 @@ namespace Assignment_three
             // Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
             //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
             //afterward
-            double[] prices = { 25.5, 40.0 };
+            //double[] prices = { 25.5, 40.0 };
 
-            ReplaceArray(ref prices);
+            //ReplaceArray(ref prices);
 
-            Console.WriteLine(prices.Length);
+            //Console.WriteLine(prices.Length);
+            #endregion
+            #region Question nine
+            //  Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+            //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
+            bool found = TryGetPrice("Clean Code", out double price);
+
+            if (found)
+            {
+                Console.WriteLine(price);
+            }
             #endregion
         }
 
