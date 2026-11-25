@@ -69,6 +69,7 @@ namespace Assignment_three
             ApplyDiscount(prices);
             Console.WriteLine(prices[0]);
             // it will change obviously bec array is  a refrence type 
+
  
             #endregion
         }
