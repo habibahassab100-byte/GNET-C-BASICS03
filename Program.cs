@@ -8,9 +8,17 @@ namespace Assignment_three
         #region Question three
         //Write a method called PrintWelcomeMessage that takes no parameters and prints
         //"Welcome to the Library!".Call it from Main.
-        public static void PrintWelcomeMessage()
+        //public static void PrintWelcomeMessage()
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+        #endregion
+        #region Question five
+        //Write a method AddBonusPages(int pages) that adds 50 to pages.Call it with a variable
+        //int pages = 400; and print pages afterward.What do you expect to see, and why?
+         public static void AddBonusPages(int pages)
         {
-            Console.WriteLine("Welcome to the Library!");
+            pages += 50;
         }
         #endregion
 
@@ -33,7 +41,16 @@ namespace Assignment_three
             #region Question three
             //Write a method called PrintWelcomeMessage that takes no parameters and prints
             //"Welcome to the Library!".Call it from Main.
-             PrintWelcomeMessage();
+            //PrintWelcomeMessage();
+            #endregion
+            #region Question five
+           // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+           //int pages = 400; and print pages afterward. What do you expect to see, and why?
+           int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
+            // expect it to print 400 because the method AddBonusPages does not change the original variable pages
+            // it only modifies a copy of it.
             #endregion
 
         }
